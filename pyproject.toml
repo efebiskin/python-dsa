@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python-dsa"
+version = "1.0.0"
+description = "20 classic data-structure & algorithm problems in Python, organized by pattern, with complexity notes and a full pytest suite."
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Efecan Biskin", email = "efebskn@gmail.com" }]
+requires-python = ">=3.9"
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[tool.setuptools.packages.find]
+include = ["dsa*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
